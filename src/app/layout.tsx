@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
+import { StylesAndThemes } from './global.style'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -31,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}><GlobalStyle/>{children}</body>
+      <body className={inter.className}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></body>
     </html>
   )
 }
