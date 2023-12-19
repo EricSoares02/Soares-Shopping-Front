@@ -1,3 +1,4 @@
+'use client'
 import type { Metadata } from 'next'
 import { ABeeZee } from 'next/font/google'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -28,9 +29,9 @@ const Query = new QueryClient({
 });
 
 
-const abeezee = ABeeZee({weight:'400'})
+const abeezee = ABeeZee({subsets:["latin"],weight:'400'})
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Soares Shopping',
   description: 'The Better Shopping For Your Style',
 }
