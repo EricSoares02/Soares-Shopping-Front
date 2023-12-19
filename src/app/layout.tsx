@@ -4,6 +4,7 @@ import { ABeeZee } from 'next/font/google'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
 import { StylesAndThemes } from './global.style'
+import Header from '@/components/header/header'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -43,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></QueryClientProvider></body>
+      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/><Header/>{children}</ThemeProvider></QueryClientProvider></body>
     </html>
   )
 }
