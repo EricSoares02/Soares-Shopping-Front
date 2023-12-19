@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {ABeeZee} from 'next/font/google'
 import './globals.css'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
 import { StylesAndThemes } from './global.style'
@@ -18,7 +18,7 @@ body {
 }
 `
 
-const inter = Inter({ subsets: ['latin'] })
+const abeezee = ABeeZee({weight:'400'})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></body>
+      <body className={abeezee.className}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></body>
     </html>
   )
 }
