@@ -26,7 +26,7 @@ const SearchComponent = {
     display: flex;
   `,
 
-  SearchInput: styled.input`
+  SearchInput: styled.input.attrs({type:'text'})`
     width: 100%;
     height: 100%;
     border: transparent;
