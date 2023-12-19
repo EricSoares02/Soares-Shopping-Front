@@ -9,8 +9,8 @@ const StylesAndThemes = {
   lengths: {
     
   },
-  fontStyles: {
-    segoe: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+  fonts: {
+    segoe: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
   },
 };
 export { StylesAndThemes };
