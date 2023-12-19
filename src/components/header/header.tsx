@@ -1,6 +1,7 @@
 "use client";
 import { HeaderComponent } from "./header.style";
 import Logo from "./logo/logo";
+import Options from "./options/options";
 import Search from "./search-bar/search-bar";
 
 export default function Header() {
@@ -8,6 +9,7 @@ export default function Header() {
     <HeaderComponent>
       <Logo />
       <Search/>
+      <Options/>
     </HeaderComponent>
   );
 }
