@@ -8,7 +8,10 @@ const HeaderComponent = styled.header`
   height: 75px;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
   background-color: ${(props) => props.theme.colors.yellow};
   box-shadow: 0 0 14px ${(props) => props.theme.colors.shadow};
 `
