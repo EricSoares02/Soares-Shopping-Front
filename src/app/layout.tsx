@@ -17,6 +17,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+};
+main{
+position: absolute;
+top:75px;
+width: 100%;
 }
 `;
 
