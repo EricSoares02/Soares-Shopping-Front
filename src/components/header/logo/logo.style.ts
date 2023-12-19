@@ -1,3 +1,4 @@
+import { devices } from "@/app/global.screen";
 import styled from "styled-components";
 
 const LogoComponent = {
@@ -6,6 +7,9 @@ const LogoComponent = {
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media ${devices.sm} {
+    display: none;
+    }
   `,
 
   Logo: styled.a`
