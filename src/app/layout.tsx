@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import {ABeeZee} from 'next/font/google'
-import './globals.css'
+import { ABeeZee } from 'next/font/google'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
 import { StylesAndThemes } from './global.style'
 
@@ -16,7 +16,17 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-`
+`;
+
+const Query = new QueryClient({
+  defaultOptions:{
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 60 * 60,
+    },
+  }
+});
+
 
 const abeezee = ABeeZee({weight:'400'})
 
@@ -32,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={abeezee.className}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></body>
+      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/>{children}</ThemeProvider></QueryClientProvider></body>
     </html>
   )
 }
