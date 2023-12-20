@@ -6,10 +6,12 @@ import Search from "./search-bar/search-bar";
 
 export default function Header() {
   return (
-    <HeaderComponent>
+    <HeaderComponent.Header>
+      <HeaderComponent.ConteinerHeader>
       <Logo />
       <Search/>
       <Options/>
-    </HeaderComponent>
+      </HeaderComponent.ConteinerHeader>
+    </HeaderComponent.Header>
   );
 }

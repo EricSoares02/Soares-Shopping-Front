@@ -14,7 +14,7 @@ const LogoComponent = {
 
   Logo: styled.a`
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     color: ${(props) => props.theme.colors.blackBlue};

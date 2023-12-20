@@ -19,8 +19,8 @@ const OptionsComponent = {
 `,
 
  ImageOptions: styled.img`
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 `,
  ImageOptionsUser: styled.img`
   width: 30px;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const SearchComponent = {
   Conteiner: styled.div`
-   width: 1000px;
-   height: 50px;
+   width: 800px;
+   height: 45px;
    display: flex;
    @media ${devices.xs} {
     width: 150px;
@@ -30,11 +30,11 @@ const SearchComponent = {
     width: 100%;
     height: 100%;
     border: transparent;
-    border-radius: 24px;
+    border-radius: 7px;
     background-color: ${(props) => props.theme.colors.bg};
     padding-left: 30px;
     outline: 0;
-    box-shadow: 0 0 5px ${(props) => props.theme.colors.shadowcolor};
+    box-shadow: 0 0 5px ${(props) => props.theme.colors.shadow};
   `,
 
   ImageInput: styled.img`
