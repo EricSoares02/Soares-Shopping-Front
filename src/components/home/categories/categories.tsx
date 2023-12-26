@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Link from "next/link";
 
 
 
@@ -71,12 +72,14 @@ export default function Categories() {
         >
           {CategoriesArray.map((category)=>(
             <SwiperSlide key={category.title}>
+              <Link style={{textDecoration: 'none'}} href={`/category?v=${category.title}`}>
               <CategoriesComponent.CategoryCase>
                 <CategoriesComponent.CategoryImg src={category.img}/>
                 <CategoriesComponent.CategoryTitle>
                   {category.title}
                 </CategoriesComponent.CategoryTitle>
               </CategoriesComponent.CategoryCase>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

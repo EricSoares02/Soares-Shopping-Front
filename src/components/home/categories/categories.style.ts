@@ -22,6 +22,7 @@ CategoryCase: styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
   box-shadow: 0 0 2px ${(props) => props.theme.colors.shadow};
   transition: ${(props) => props.theme.transition};
   background-color: ${(props) => props.theme.colors.bg};
