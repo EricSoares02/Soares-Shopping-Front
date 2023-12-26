@@ -22,6 +22,7 @@ main{
 position: absolute;
 top:75px;
 width: 100%;
+background-color: ${(props) => props.theme.colors.gray};
 }
 `;
 
