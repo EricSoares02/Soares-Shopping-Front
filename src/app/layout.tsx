@@ -1,10 +1,13 @@
 'use client'
 import type { Metadata } from 'next'
 import { ABeeZee } from 'next/font/google'
+import { config } from 'dotenv'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
 import { StylesAndThemes } from './global.style'
 import Header from '@/components/header/header'
+
+config();
 
 const GlobalStyle = createGlobalStyle`
 * {
