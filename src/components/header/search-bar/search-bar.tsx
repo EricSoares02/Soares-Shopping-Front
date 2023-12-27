@@ -16,7 +16,7 @@ export default function Search(){
     const { isSubmitting } = formState;
 
     const handleSubmitSearchData = async (data: any)=>{
-        router.push(`search?value=${data}`)
+        router.push(`search?value=${data.search}`)
     }
 
     return(
