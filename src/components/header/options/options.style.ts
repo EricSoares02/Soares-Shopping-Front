@@ -25,7 +25,6 @@ const OptionsComponent = {
  ImageOptionsUser: styled.img`
   width: 30px;
   height: 30px;
-  border-radius: 13px;
 `,
  AlignToCart: styled.div`
   width: auto;
