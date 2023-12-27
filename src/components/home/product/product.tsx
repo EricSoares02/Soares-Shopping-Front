@@ -18,7 +18,7 @@ export default function Products(data: Array<DefaultProductType>) {
     <ProductComponent.Conteiner>
       <ProductComponent.AlignConteiner>
         <ProductComponent.ProductConteiner>
-          <ProductComponent.Text>Products</ProductComponent.Text>
+          <ProductComponent.Text>Produtos</ProductComponent.Text>
           <ProductComponent.ProductCaseConteiner>
             <Swiper
               // install Swiper modules
