@@ -10,7 +10,7 @@ const StylesAndThemes = {
   },
   transition: "1.2s",
   lengths: {
-    
+    higth: '1200px'
   },
   fonts: {
     segoe: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
