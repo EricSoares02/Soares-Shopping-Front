@@ -110,7 +110,7 @@ const ProductComponent = {
     justify-content: space-between;
     align-items: center;
     p {
-      font-size: 14px;
+      font-size: 18px;
     }
     @media ${devices.sm} {
       &p {
