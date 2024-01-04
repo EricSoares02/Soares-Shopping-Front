@@ -1,6 +1,6 @@
 import { StarComponent } from "./star.style";
 
-export default function Star(prop: string) {
+export default function Star(prop?: string) {
   return (
     <StarComponent>
       <svg
