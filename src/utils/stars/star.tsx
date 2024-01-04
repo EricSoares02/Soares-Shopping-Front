@@ -1,8 +1,8 @@
 import { StarComponent } from "./star.style";
 
-export default function Star(prop?: string) {
+export default function Star(size: number, prop?: string,) {
   return (
-    <StarComponent>
+    <StarComponent $starSize={size}>
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
