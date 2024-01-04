@@ -13,7 +13,7 @@ export default function Star(prop?: string) {
       >
         <g
           transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-          fill={prop ? prop : "#000000"}
+          fill={prop ? prop : "#D9D9D9"}
           stroke="none"
         >
           <path
