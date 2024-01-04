@@ -7,10 +7,12 @@ export default function BackButton() {
 
   return (
     <BackBtnComponent.Conteiner>
-      <BackBtnComponent.Btn onClick={() => router.back()}>
-        <Image src="back-btn.svg" alt="img" width={30} height={30} priority />{" "}
-        Back
-      </BackBtnComponent.Btn>
+      <BackBtnComponent.ConteinerToAlign>
+        <BackBtnComponent.Btn onClick={() => router.back()}>
+          <Image src="back-btn.svg" alt="img" width={30} height={30} priority />{" "}
+          Back
+        </BackBtnComponent.Btn>
+      </BackBtnComponent.ConteinerToAlign>
     </BackBtnComponent.Conteiner>
   );
 }
