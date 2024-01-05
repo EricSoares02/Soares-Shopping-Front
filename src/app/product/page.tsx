@@ -21,9 +21,6 @@ export default function ProductPage({
     setImgIdx(index);
   };
 
-  console.log(data[0]);
-  console.log(data[1]);
-
   return isLoading ? (
     <main>
       <Load />
