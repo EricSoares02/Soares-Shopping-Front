@@ -7,9 +7,9 @@ const OthersCommentsComponent = {
   `,
   CommentsConteiner: styled.div`
     width: 100%;
-    height: auto;
+    max-height: 470px;
     padding: 8px;
-    scroll-behavior: auto;
+    overflow-y: scroll;
   `,
   CommentsCase: styled.div`
     width: 100%;
