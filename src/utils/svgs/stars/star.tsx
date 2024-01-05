@@ -1,8 +1,13 @@
 import { StarComponent } from "./star.style";
 
-export default function Star(size: number, prop?: string,) {
+interface PropType {
+  size: number;
+  color?: string;
+}
+
+export default function Star(prop: PropType) {
   return (
-    <StarComponent $starSize={size}>
+    <StarComponent $starSize={prop.size}>
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +18,7 @@ export default function Star(size: number, prop?: string,) {
       >
         <g
           transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-          fill={prop ? prop : "#D9D9D9"}
+          fill={prop.color ? prop.color : "#D9D9D9"}
           stroke="none"
         >
           <path

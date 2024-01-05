@@ -26,7 +26,7 @@ export default function PercentageRating(Percentage: PercentagePropsType) {
           />
         </PercentageRatingComponent.Rating>
         <span>5</span>
-        {Star(starSize)}
+        {Star({size:starSize})}
       </PercentageRatingComponent.RatingCase>
       <PercentageRatingComponent.RatingCase>
         <PercentageRatingComponent.Rating>
@@ -35,7 +35,7 @@ export default function PercentageRating(Percentage: PercentagePropsType) {
           />
         </PercentageRatingComponent.Rating>
         <span>4</span>
-        {Star(starSize)}
+        {Star({size:starSize})}
       </PercentageRatingComponent.RatingCase>
       <PercentageRatingComponent.RatingCase>
         <PercentageRatingComponent.Rating>
@@ -44,7 +44,7 @@ export default function PercentageRating(Percentage: PercentagePropsType) {
           />
         </PercentageRatingComponent.Rating>
         <span>3</span>
-        {Star(starSize)}
+        {Star({size:starSize})}
       </PercentageRatingComponent.RatingCase>
       <PercentageRatingComponent.RatingCase>
         <PercentageRatingComponent.Rating>
@@ -53,7 +53,7 @@ export default function PercentageRating(Percentage: PercentagePropsType) {
           />
         </PercentageRatingComponent.Rating>
         <span>2</span>
-        {Star(starSize)}
+        {Star({size:starSize})}
       </PercentageRatingComponent.RatingCase>
       <PercentageRatingComponent.RatingCase>
         <PercentageRatingComponent.Rating>
@@ -62,7 +62,7 @@ export default function PercentageRating(Percentage: PercentagePropsType) {
           />
         </PercentageRatingComponent.Rating>
         <span>1</span>
-        {Star(starSize)}
+        {Star({size:starSize})}
       </PercentageRatingComponent.RatingCase>
     </PercentageRatingComponent.Conteiner>
   );
