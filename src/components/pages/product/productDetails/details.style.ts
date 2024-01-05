@@ -4,21 +4,21 @@ import styled from "styled-components";
 const DetailsComponent = {
   Conteiner: styled.section`
     width: 400px;
-    height: 800px;
+    height: 870px;
     display: flex;
     flex-direction: column;
-    border: solid 1px ${(props) => props.theme.colors.shadowcolor};
+    border: solid 1px ${(props) => props.theme.colors.shadow};
     border-radius: 10px;
     padding: 20px 0 0 15px;
     & i {
-      color: ${(props) => props.theme.colors.shadowcolor};
+      color: ${(props) => props.theme.colors.shadow};
       text-decoration: line-through;
-      font-family: ${(props) => props.theme.fontStyle};
+      font-family: ${(props) => props.theme.fonts.segoe};
     }
     & span {
       font-weight: 100;
       font-size: 50px;
-      font-family: ${(props) => props.theme.fontStyle};
+      font-family: ${(props) => props.theme.fonts.segoe};
       color: ${(props) => props.theme.colors.blackBlue};
     }
     @media ${devices.lg} {
@@ -97,7 +97,7 @@ const DetailsComponent = {
     display: flex;
     flex-direction: column;
     padding-left: 35px;
-    gap: 4px;
+    gap: 6px;
   `,
 };
 export { DetailsComponent };
