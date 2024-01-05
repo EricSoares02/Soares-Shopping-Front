@@ -30,11 +30,6 @@ const ButtonComponent = {
       width: 250px;
     }
   `,
-
-  ImageBtn: styled.img`
-    width: 30px;
-    height: 30px;
-  `,
 };
 
 export {ButtonComponent}
