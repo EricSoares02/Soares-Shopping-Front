@@ -8,27 +8,13 @@ type PropsType = {
   comments: Array<CommentsType>;
 };
 
-type ReviewsNumberPropsType = Array<CommentsType>;
-
 export default function Comments(props: PropsType) {
-  const reviewsNumber = (Comments: ReviewsNumberPropsType) => {
-    if (Comments.length === 0) {
-      return 0;
-    }
-
-    let starsCount = 0;
-    const T = Comments.map((comment) => {
-      return (starsCount = starsCount + comment.stars);
-    });
-
-    return starsCount / Comments.length;
-  };
 
   return (
     <CommentsComponent.Conteiner>
       <CommentsComponent.TopSide>
         <CommentsComponent.ReviewSide>
-          {Reviews(reviewsNumber(props.comments), props.comments.length)}
+          {Reviews(props.comments)}
         </CommentsComponent.ReviewSide>
         <CommentsComponent.CommentsSide>
           {OtherComments(props.comments)}

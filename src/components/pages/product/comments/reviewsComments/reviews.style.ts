@@ -18,7 +18,7 @@ const ReviewsCommentsComponent = {
 
   ReviewCase: styled.section`
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     gap: 10px;
     // flex-direction: column;
