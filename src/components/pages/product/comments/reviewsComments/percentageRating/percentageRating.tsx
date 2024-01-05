@@ -1,4 +1,4 @@
-import Star from "@/utils/stars/star";
+import Star from "@/utils/svgs/stars/star";
 import { PercentageRatingComponent } from "./percentageRating.style";
 import { PercentageVerify } from "./percentageVerify";
 
