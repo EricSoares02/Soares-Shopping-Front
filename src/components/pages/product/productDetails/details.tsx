@@ -31,7 +31,7 @@ export default function Details(props: PropsType) {
         <DetailsComponent.SelectOptions>
           {props.props.options.map((item) => (
             <DetailsComponent.Options key={item} value={item}>
-              {item}
+              {item.toUpperCase()}
             </DetailsComponent.Options>
           ))}
         </DetailsComponent.SelectOptions>

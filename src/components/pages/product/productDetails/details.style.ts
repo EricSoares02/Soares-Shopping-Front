@@ -2,7 +2,6 @@ import { devices } from "@/app/global.screen";
 import styled from "styled-components";
 
 const DetailsComponent = {
-
   Conteiner: styled.section`
     width: 400px;
     height: 800px;
@@ -63,6 +62,7 @@ const DetailsComponent = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 8px;
 
     h3 {
       font-size: 16px;
@@ -72,11 +72,21 @@ const DetailsComponent = {
   SelectOptions: styled.select`
     width: 40%;
     height: 40px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: flex;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
   `,
 
   Options: styled.option`
     font-weight: 400;
     font-size: 16px;
+    width: 100%;
+    height: 40px;
   `,
 
   BtnConteiner: styled.div`
