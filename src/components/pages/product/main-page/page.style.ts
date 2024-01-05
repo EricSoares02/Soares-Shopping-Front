@@ -30,4 +30,11 @@ const ProductComponent = {
   `,
 };
 
-export { ProductComponent };
+const Separetor =  styled.div`
+  width: 65%;
+  height: 2px;
+  background-color: ${(props) => props.theme.colors.gray};
+  margin: 0 23px 0 23px;
+  `;
+
+export { ProductComponent, Separetor };
