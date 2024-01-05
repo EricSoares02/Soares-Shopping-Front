@@ -5,37 +5,38 @@ import OtherComments from "./otherComments/comments";
 import Reviews from "./reviewsComments/reviews";
 
 type PropsType = {
-  comments: Array<CommentsType>,
+  comments: Array<CommentsType>;
 };
 
 type ReviewsNumberPropsType = Array<CommentsType>;
 
 export default function Comments(props: PropsType) {
-
-  const reviewsNumber = (Comments: ReviewsNumberPropsType) =>{
-
-    if (Comments.length===0) {
-      return 0
+  
+  const reviewsNumber = (Comments: ReviewsNumberPropsType) => {
+    if (Comments.length === 0) {
+      return 0;
     }
 
-    let starsCount = 0
-    const T = Comments.map((comment)=>{
-      return starsCount = starsCount + comment.stars
-    })
+    let starsCount = 0;
+    const T = Comments.map((comment) => {
+      return (starsCount = starsCount + comment.stars);
+    });
 
-    return starsCount/Comments.length
-  }
+    return starsCount / Comments.length;
+  };
 
-  
   return (
     <CommentsComponent.Conteiner>
-      <CommentsComponent.ReviewSide>
-      {Reviews(reviewsNumber(props.comments), props.comments.length)}
-      </CommentsComponent.ReviewSide>
-      <CommentsComponent.CommentsSide>
-        {OtherComments(props.comments)}
-        {/* {MyComment()} */}
-      </CommentsComponent.CommentsSide>
+      <CommentsComponent.TopSide>
+        <CommentsComponent.ReviewSide>
+          {Reviews(reviewsNumber(props.comments), props.comments.length)}
+        </CommentsComponent.ReviewSide>
+        <CommentsComponent.CommentsSide>
+          {OtherComments(props.comments)}
+          {/* {MyComment()} */}
+        </CommentsComponent.CommentsSide>
+      </CommentsComponent.TopSide>
+      <CommentsComponent.BottomSide>{MyComment()}</CommentsComponent.BottomSide>
     </CommentsComponent.Conteiner>
   );
 }

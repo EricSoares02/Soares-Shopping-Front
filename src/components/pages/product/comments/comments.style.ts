@@ -5,8 +5,14 @@ const CommentsComponent = {
 Conteiner: styled.div`
 width: 70%;
 height: auto;
-display: flex;
+display: block;
 padding: 10px;
+`,
+
+TopSide: styled.div`
+width: 100%;
+height: auto;
+display: flex;
 `,
 
 ReviewSide: styled.section`
@@ -19,6 +25,13 @@ CommentsSide: styled.section`
 width: 60%;
 height: auto;
 display: flex;
+`,
+
+BottomSide: styled.div`
+width: 100%;
+height: auto;
+display: flex;
+justify-content: end;
 `
 
 }
