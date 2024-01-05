@@ -1,6 +1,7 @@
 import { converterParaReal } from "@/utils/conversorCoin";
 import { DetailsComponent } from "./details.style";
 import AddToCartButton from "./addToCartButton/button";
+import FinishBuyButton from "./finishBuy/finishBuy";
 
 type PropsType = {
   props: {
@@ -38,7 +39,7 @@ export default function Details(props: PropsType) {
         </DetailsComponent.SelectOptions>
       </DetailsComponent.OptionsConteiner>
       <DetailsComponent.BtnConteiner>
-        {/* {FinishBuyBtn(data.product)} */}
+        {FinishBuyButton()}
         {AddToCartButton()}
       </DetailsComponent.BtnConteiner>
     </DetailsComponent.Conteiner>
