@@ -42,16 +42,13 @@ export default function Reviews(props: ReviewsNumberPropsType) {
       }
     });
 
-    const T = {
+    return  {
       fiveStars: five * 100/comments.length,
       fourStars: four * 100/comments.length,
       threeStars: three * 100/comments.length,
       twoStars: two * 100/comments.length,
       oneStars: one * 100/comments.length,
     };
-
-    console.log(T)
-    return T
   };
 
   return (
