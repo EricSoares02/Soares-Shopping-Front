@@ -72,6 +72,7 @@ export default function Categories() {
           pagination={{ el: ".swiper-pagination", clickable: false }}  
          
         >
+          <div className="swiper-pagination"></div>
           {CategoriesArray.map((category)=>(
             <SwiperSlide key={category.title}>
               <Link style={{textDecoration: 'none'}} href={`/category?v=${category.title}`}>
