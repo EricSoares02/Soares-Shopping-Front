@@ -69,7 +69,8 @@ export default function Categories() {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           slidesPerView={8}
           navigation
-          pagination={{ clickable: true }}  
+          pagination={{ el: ".swiper-pagination", clickable: false }}  
+         
         >
           {CategoriesArray.map((category)=>(
             <SwiperSlide key={category.title}>
