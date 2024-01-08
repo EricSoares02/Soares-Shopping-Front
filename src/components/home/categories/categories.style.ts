@@ -13,6 +13,14 @@ CategoriesConteiner: styled.div`
   width: 70vw;
   height: 100%;
   margin: 20px;
+  & .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: auto !important;
+      left: auto !important;
+      z-index: 500;
+    }
 `,
 
 CategoryCase: styled.div`
