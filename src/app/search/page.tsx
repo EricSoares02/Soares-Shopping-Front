@@ -1,4 +1,5 @@
 'use client'
+import Footer from "@/components/footer/footer";
 import SearchPage from "@/components/pages/search/main-page/mainPage";
 import NotFound from "@/components/pages/search/notFound/notFound";
 import { useSearchProductsRequest } from "@/hooks/hookForSearch/useRequestToSearch";
@@ -41,6 +42,7 @@ export default function Search({searchParams} : {
     return isLoading ? (<><Load/></>) : (
         <>
           {showNotFound(data?.data)}
+          {Footer()}
         </>
       )
 }

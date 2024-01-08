@@ -53,6 +53,7 @@ export default function ProductPage({
           </ProductComponent.BottomSide>
         </ProductComponent.AlignBox>
       </ProductComponent.Conteiner>
+      {Footer()}
     </>
   );
 }
