@@ -1,6 +1,10 @@
 "use client";
+import Footer from "@/components/footer/footer";
 import Comments from "@/components/pages/product/comments/comments";
-import { ProductComponent, Separetor } from "@/components/pages/product/main-page/page.style";
+import {
+  ProductComponent,
+  Separetor,
+} from "@/components/pages/product/main-page/page.style";
 import Details from "@/components/pages/product/productDetails/details";
 import ImgComponent from "@/components/pages/product/productImage/productImg";
 import { useGetProductByIdRequest } from "@/hooks/hookForPages/productPage/useRequestToProduct";
@@ -22,11 +26,9 @@ export default function ProductPage({
   };
 
   return isLoading ? (
-    <main>
-      <Load />
-    </main>
+    <Load />
   ) : (
-    <main>
+    <>
       <BackButton />
       <ProductComponent.Conteiner>
         <ProductComponent.AlignBox>
@@ -45,12 +47,12 @@ export default function ProductPage({
               },
             })}
           </ProductComponent.TopSide>
-          <Separetor/>
+          <Separetor />
           <ProductComponent.BottomSide>
-           {Comments({comments: data[1]?.data})}
+            {Comments({ comments: data[1]?.data })}
           </ProductComponent.BottomSide>
         </ProductComponent.AlignBox>
       </ProductComponent.Conteiner>
-    </main>
+    </>
   );
 }

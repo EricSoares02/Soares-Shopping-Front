@@ -53,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/><Header/>{children}</ThemeProvider></QueryClientProvider></body>
+      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/><Header/><main>{children}</main></ThemeProvider></QueryClientProvider></body>
     </html>
   )
 }

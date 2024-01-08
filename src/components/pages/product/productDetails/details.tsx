@@ -28,6 +28,7 @@ export default function Details(props: PropsType) {
         </p>
         <DetailsComponent.Text>Frete Grátis</DetailsComponent.Text>
       </DetailsComponent.TextConteiner>
+        falta loja
       <DetailsComponent.OptionsConteiner>
         <h3>Options:</h3>
         <DetailsComponent.SelectOptions>

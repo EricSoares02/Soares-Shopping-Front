@@ -16,12 +16,12 @@ export default function Home() {
 
   const {data, isLoading} = useProductsRequest()
   
-  return isLoading ? (<main><Load/></main>) : (
-    <main>
+  return isLoading ? (<><Load/></>) : (
+    <>
       <Slider></Slider>
       <Separetor/>
       <Categories></Categories>
       {Products(data?.data)}
-    </main>
+    </>
   )
 }

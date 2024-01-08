@@ -38,9 +38,9 @@ export default function Search({searchParams} : {
     }
 
 
-    return isLoading ? (<main><Load/></main>) : (
-        <main>
+    return isLoading ? (<><Load/></>) : (
+        <>
           {showNotFound(data?.data)}
-        </main>
+        </>
       )
 }
