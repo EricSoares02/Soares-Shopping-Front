@@ -10,6 +10,20 @@ const OthersCommentsComponent = {
     max-height: 470px;
     padding: 8px;
     overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px gray;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: ${props=>props.theme.colors.grayBlack};
+        border-radius: 15px;
+        height: 2px;
+    }
+    
   `,
   CommentsCase: styled.div`
     width: 100%;
@@ -40,7 +54,7 @@ const OthersCommentsComponent = {
     display: flex;
     justify-content: end;
     align-items: center;
-    color: ${props=> props.theme.colors.shadow};
+    color: ${(props) => props.theme.colors.shadow};
     font-size: 12px;
   `,
 
@@ -60,34 +74,34 @@ const OthersCommentsComponent = {
   `,
 
   LikeButton: styled.button`
-  width: 90px;
-  height: 33px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid ${props=> props.theme.colors.shadow};
-  border-radius: 15px;
-  color: ${props=> props.theme.colors.shadow};
-  transition: ${props=> props.theme.transition};
-  cursor: pointer;
-  &:hover{
-    border: 1px solid ${props=> props.theme.colors.blue};
-    color: ${(props) => props.theme.colors.blue};
-  }
+    width: 90px;
+    height: 33px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid ${(props) => props.theme.colors.shadow};
+    border-radius: 15px;
+    color: ${(props) => props.theme.colors.shadow};
+    transition: ${(props) => props.theme.transition};
+    cursor: pointer;
+    &:hover {
+      border: 1px solid ${(props) => props.theme.colors.blue};
+      color: ${(props) => props.theme.colors.blue};
+    }
   `,
 
-ReportButton: styled.button`
-width: 25px;
-height: 25px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: transparent;
-border: none;
-cursor: pointer;
-`
+  ReportButton: styled.button`
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  `,
 };
 
 export { OthersCommentsComponent };
