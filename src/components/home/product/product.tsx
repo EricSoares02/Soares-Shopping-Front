@@ -24,30 +24,34 @@ export default function Products(data: Array<DefaultProductType>) {
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               slidesPerView={4}
-        
               navigation
-              pagination={{ clickable: true }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}
+              
             >
-              {data?.map((value: DefaultProductType) => (
-                <SwiperSlide key={value.id}>
-                  <ProductComponent.ProductCase>
-                    <Link href={`/product?id=${value.id}`}>
-                      <ProductComponent.ProductImgConteiner>
-                        <ProductComponent.ProductImg
-                          src={value.url_img[0]}
-                        ></ProductComponent.ProductImg>
-                      </ProductComponent.ProductImgConteiner>
-                    </Link>
-                    <ProductComponent.ProductDesc>
-                      <h2>{value.name.toUpperCase()}</h2>
-                      <h3>{value.category.toUpperCase()}</h3>
-                    </ProductComponent.ProductDesc>
-                    <ProductComponent.PriceAndButton>
-                      <p>{converterParaReal(value.price_in_cent)}</p>
-                    </ProductComponent.PriceAndButton>
-                  </ProductComponent.ProductCase>
-                </SwiperSlide>
-              ))}
+              <ProductComponent.PaginationCase>
+                {" "}
+                <div className="swiper-pagination"></div>
+              </ProductComponent.PaginationCase>
+                {data?.map((value: DefaultProductType) => (
+                  <SwiperSlide key={value.id} className="swiper-slider">
+                    <ProductComponent.ProductCase>
+                      <Link href={`/product?id=${value.id}`}>
+                        <ProductComponent.ProductImgConteiner>
+                          <ProductComponent.ProductImg
+                            src={value.url_img[0]}
+                          ></ProductComponent.ProductImg>
+                        </ProductComponent.ProductImgConteiner>
+                      </Link>
+                      <ProductComponent.ProductDesc>
+                        <h2>{value.name.toUpperCase()}</h2>
+                        <h3>{value.category.toUpperCase()}</h3>
+                      </ProductComponent.ProductDesc>
+                      <ProductComponent.PriceAndButton>
+                        <p>{converterParaReal(value.price_in_cent)}</p>
+                      </ProductComponent.PriceAndButton>
+                    </ProductComponent.ProductCase>
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </ProductComponent.ProductCaseConteiner>
         </ProductComponent.ProductConteiner>

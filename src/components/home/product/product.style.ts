@@ -30,7 +30,6 @@ const ProductComponent = {
     }
 
     @media ${devices["2xl"]} {
-      
     }
   `,
 
@@ -43,9 +42,26 @@ const ProductComponent = {
   `,
   ProductCaseConteiner: styled.section`
     width: 100%;
-    height: 435px;
-    display: flex;
+    height: 475px;
+    display: block;
+    & .swiper-pagination {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: auto !important;
+      left: auto !important;
+      z-index: 500;
+    }
+   
   `,
+
+  PaginationCase: styled.div`
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+  `,
+
   ProductCase: styled.div`
     width: 280px;
     height: 430px;
