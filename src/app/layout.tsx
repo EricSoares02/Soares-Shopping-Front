@@ -1,11 +1,13 @@
 'use client'
 import type { Metadata } from 'next'
 import { ABeeZee } from 'next/font/google'
+import { Provider } from 'react-redux'
 import { config } from 'dotenv'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ThemeProvider, createGlobalStyle } from 'styled-components' 
 import { StylesAndThemes } from './global.style'
 import Header from '@/components/header/header'
+import store from '@/redux/root-reducer'
 
 config();
 
@@ -53,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/><Header/><main>{children}</main></ThemeProvider></QueryClientProvider></body>
+      <body className={abeezee.className}><QueryClientProvider client={Query} contextSharing={true}><Provider store={store}><ThemeProvider theme={StylesAndThemes}><GlobalStyle/><Header/><main>{children}</main></ThemeProvider></Provider></QueryClientProvider></body>
     </html>
   )
 }
