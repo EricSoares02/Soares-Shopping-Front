@@ -6,7 +6,7 @@ const rootReducer = combineReducers({
     userSlice,
 });
 
-
+export type RootStateType = ReturnType<typeof rootReducer>
 
 const store = configureStore({
   reducer: rootReducer,
