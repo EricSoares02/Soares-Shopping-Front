@@ -25,7 +25,7 @@ export default function Products(data: Array<DefaultProductType>) {
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               slidesPerView={4}
               navigation
-              pagination={{ el: ".swiper-pagination", clickable: true }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}  
               
             >
               <ProductComponent.PaginationCase>

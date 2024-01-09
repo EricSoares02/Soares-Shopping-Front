@@ -70,7 +70,6 @@ export default function Categories() {
           slidesPerView={8}
           navigation
           pagination={{ el: ".swiper-pagination", clickable: false }}  
-         
         >
           <div className="swiper-pagination"></div>
           {CategoriesArray.map((category)=>(
