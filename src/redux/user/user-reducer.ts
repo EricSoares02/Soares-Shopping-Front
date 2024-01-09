@@ -1,44 +1,36 @@
-import { createSlice } from "@reduxjs/toolkit"
-import { stringify } from "querystring";
+import { createSlice } from "@reduxjs/toolkit";
+
+
+const token = localStorage.getItem("token") ?? "";
+const name = localStorage.getItem("name") ?? "";
 
 
 const initialState = {
-    access_token: '',
-    user_name: '',
-}
-
+  access_token: token, 
+  user_name: name 
+};
 
 const userSlice = createSlice({
-    name: 'user',
-    initialState,
-    reducers: {
-        login: (state, action) => {
+  name: "user",
+  initialState,
+  reducers: {
+    login: (state, action) => {
+      state.access_token = action.payload.access_token;
+      state.user_name = action.payload.user_name;
 
-            state.access_token = action.payload.access_token;
-            state.user_name = action.payload.user_name;
-            
-            localStorage.setItem('user', JSON.stringify(state))
-        },
+      localStorage.setItem("token", JSON.stringify(state.access_token));
+      localStorage.setItem("name", JSON.stringify(state.user_name));
+    },
 
-        logout: (state, action) =>{
+    logout: (state) => {
+      state.access_token = "";
+      state.user_name = "";
 
-            state.access_token = '';
-            state.user_name = '';
-            
-            localStorage.setItem('user', JSON.stringify(state))
-        },
-    
-        getToken: (state, action) => {
-          
-          const user = JSON.parse(localStorage.getItem('user') ?? '');
-          
-          state.access_token = user.access_token;
-          state.user_name = user.user_name;
-
-        }
-    }
+      localStorage.setItem("token", JSON.stringify(state.access_token));
+      localStorage.setItem("name", JSON.stringify(state.user_name));
+    },
+  },
 });
 
-
-export const {getToken, login, logout} = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 export default userSlice.reducer;
