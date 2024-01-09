@@ -83,6 +83,7 @@ const LoginFormComponent = {
     height: auto;
     display: flex;
     flex-direction: column;
+    gap: 3px;
     align-items: center;
     & p {
       font-size: 14px;
