@@ -23,11 +23,8 @@ const userSlice = createSlice({
     },
 
     logout: (state) => {
-      state.access_token = "";
-      state.user_name = "";
-
-      localStorage.setItem("token", JSON.stringify(state.access_token));
-      localStorage.setItem("name", JSON.stringify(state.user_name));
+      localStorage.removeItem("token");
+      localStorage.removeItem("name");
     },
   },
 });
