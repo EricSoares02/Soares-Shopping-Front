@@ -1,7 +1,15 @@
+"use client";
 import { useForm } from "react-hook-form";
 import { LoginFormComponent } from "./loginForm.style";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch } from "react-redux";
+import { login } from "@/redux/user/user-reducer";
+import { DoResquest } from "@/services/requests";
+import { useRouter } from 'next/navigation'
+import { API_URL } from "@/services/urls";
+
+
 
 const schema = yup.object({
   email: yup
@@ -14,8 +22,16 @@ const schema = yup.object({
     .required("Campo obrigatório"),
 });
 
+interface SubmitDataType {
+  password: string;
+  email: string;
+}
+
 export default function LoginForm() {
 
+  const dispath = useDispatch();
+  const router = useRouter()
+  // form settings
   const { register, handleSubmit, formState } = useForm({
     mode: "onSubmit",
     resolver: yupResolver(schema),
@@ -24,15 +40,30 @@ export default function LoginForm() {
       email: "",
     },
   });
-
   const { errors, isSubmitting } = formState;
+
+  // request settings
  
-  const handleSubmitData = async (data: any) => {
-    
-    console.log('tentou logar')
-    // api.post("http://localhost:3333/login", data).then(function (response) {
-    
-    // });
+
+  const handleSubmitData = async (params: SubmitDataType) => {
+    const res = await DoResquest.post(`${API_URL}/login` ?? "", {
+      email: params.email,
+      password: params.password,
+    })
+      .then((response) => response.data)
+      .catch((response) => response.response.data.message);
+
+    if (res.data !== "successful") {
+      const err = null;
+    }
+
+    const fakeUser = {
+      access_token: res.data.access_token,
+      user_name: `${res.data.user.first_name} ${res.data.user.last_name}`,
+    };
+
+    dispath(login(fakeUser));
+    router.push('/account')
   };
 
   return (
