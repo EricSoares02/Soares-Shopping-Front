@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Image from "next/image";
 
 export default function Products(data: Array<DefaultProductType>) {
   return (
@@ -37,9 +38,13 @@ export default function Products(data: Array<DefaultProductType>) {
                     <ProductComponent.ProductCase>
                       <Link href={`/product?id=${value.id}`}>
                         <ProductComponent.ProductImgConteiner>
-                          <ProductComponent.ProductImg
-                            src={value.url_img[0]}
-                          ></ProductComponent.ProductImg>
+                          <Image
+                          alt=""
+                          src={value.url_img[0]}
+                          width={280}
+                          height={300}
+                          />
+            
                         </ProductComponent.ProductImgConteiner>
                       </Link>
                       <ProductComponent.ProductDesc>
