@@ -30,7 +30,8 @@ interface SubmitDataType {
 export default function LoginForm() {
 
   const dispath = useDispatch();
-  const router = useRouter()
+  const router = useRouter();
+
   // form settings
   const { register, handleSubmit, formState } = useForm({
     mode: "onSubmit",
@@ -42,19 +43,22 @@ export default function LoginForm() {
   });
   const { errors, isSubmitting } = formState;
 
-  // request settings
- 
 
+
+  // request settings
   const handleSubmitData = async (params: SubmitDataType) => {
     const res = await DoResquest.post(`${API_URL}/login` ?? "", {
       email: params.email,
       password: params.password,
     })
       .then((response) => response.data)
-      .catch((response) => response.response.data.message);
+      .catch((response) => response.response.data);
 
-    if (res.data !== "successful") {
-      const err = null;
+
+      console.log(res)
+
+    if (res.message !== "successful") {
+      console.log(res.message);
     }
 
     const fakeUser = {
