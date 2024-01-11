@@ -93,11 +93,6 @@ const ProductComponent = {
     background-color: #aaa;
   `,
 
-  ProductImg: styled.img`
-    width: 100%;
-    height: 100%;
-  `,
-
   ProductDesc: styled.div`
     width: 100%;
     padding-left: 15px;
