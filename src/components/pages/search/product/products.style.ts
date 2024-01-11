@@ -49,12 +49,6 @@ const ProductComponent = {
     border-radius: 7px 7px 0 0;
   `,
 
-  ProductImg: styled.img`
-    width: 100%;
-    height: 100%;
-    border-radius: 7px 7px 0 0;
-  `,
-
   ProductDesc: styled.div`
     width: 100%;
     padding-left: 15px;
