@@ -27,13 +27,6 @@ const ProductImageComponent = {
     border: none;
     cursor: pointer;
   `,
-  ChangeImg: styled.img`
-    width: 100%;
-    height: 100%;
-    border: 1px solid ${(props) => props.theme.colors.shadow};
-    border-radius: 8px;
-    object-fit: fill;
-  `,
   //conteiner para alinhar as imagens
   ImgsConteiner: styled.div`
     width: 800px;
@@ -48,12 +41,6 @@ const ProductImageComponent = {
     display: flex;
     justify-content: center;
   `,
-  ProductImg: styled.img`
-    width: 550px;
-    height: 780px;
-    object-fit: fill;
-  `,
-
   
   //case para a descriçao
   DescCase: styled.section`

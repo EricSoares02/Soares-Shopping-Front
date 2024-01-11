@@ -1,5 +1,6 @@
 "use client";
 import { ProductImageComponent } from "./productImg.style";
+import Image from "next/image";
 
 type ImageDataComponentType = {
   desc?: string;
@@ -10,15 +11,21 @@ export default function ImgComponent(
   data: ImageDataComponentType,
   setImage: { initialIdx: number; setIdx: (params: number) => void }
 ) {
-  
   return (
     <ProductImageComponent.Conteiner>
       <ProductImageComponent.ImgsConteiner>
         <ProductImageComponent.ChangeImgCase>
           {data?.url_img.map((item, index) => (
             <ProductImageComponent.ChangeImgBnt key={item}>
-              <ProductImageComponent.ChangeImg
+              <Image
+              style={{
+                objectFit: 'fill',
+                borderRadius: 6
+              }}
+                alt=""
                 src={item}
+                width={50}
+                height={60}
                 onClick={() => {
                   setImage.setIdx(index);
                 }}
@@ -27,8 +34,15 @@ export default function ImgComponent(
           ))}
         </ProductImageComponent.ChangeImgCase>
         <ProductImageComponent.ProductImgCase>
-          <ProductImageComponent.ProductImg
+          <Image
+            style={{
+              objectFit: 'fill',
+            }}
+            alt=""
+            width={550}
+            height={780}
             src={data?.url_img[setImage.initialIdx]}
+            quality={100}
           />
         </ProductImageComponent.ProductImgCase>
       </ProductImageComponent.ImgsConteiner>
