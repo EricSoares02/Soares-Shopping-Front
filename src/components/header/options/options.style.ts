@@ -36,7 +36,6 @@ const OptionsComponent = {
     color: black;
     border: solid ${(props) => props.theme.colors.gray} 1px;
     text-decoration: none;
-    text-decoration-line: none;
     font-size: 13px;
   `,
 

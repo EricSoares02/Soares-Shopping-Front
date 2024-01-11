@@ -11,13 +11,13 @@ export default function Options() {
   return (
     <OptionsComponent.DivOptions>
       <Link href={rout}>
-        {token.user_name ?  (
+        {token.user_name ? (
           <OptionsComponent.ImageOptionUserLogged>
-            {token.user_name.split(" ")[0].charAt(0).toUpperCase() +
+            {token.user_name.split(" ")[0].charAt(1).toUpperCase() +
               token.user_name.split(" ")[1].charAt(0).toUpperCase()}
           </OptionsComponent.ImageOptionUserLogged>
         ) : (
-            <OptionsComponent.ImageOptionsUser src={"/user.svg"} />
+          <OptionsComponent.ImageOptionsUser src={"/user.svg"} />
         )}
       </Link>
       <OptionsComponent.AlignToCart>
