@@ -15,6 +15,10 @@ const OptionsComponent = {
     gap: 32px;
     align-items: center;
     justify-content: end;
+    & a {
+      text-decoration: none;
+      color: black;
+    }
   `,
 
   ImageOptions: styled.img`
