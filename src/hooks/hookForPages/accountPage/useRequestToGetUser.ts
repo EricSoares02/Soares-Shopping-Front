@@ -2,26 +2,23 @@ import { DoResquest } from "@/services/requests";
 import { API_URL } from "@/services/urls";
 import { useQuery } from "react-query";
 
-interface RequestType {id: string, token: string}
-    
 
-
-const getUser= async (props:RequestType) => {
+const getUser= async (token:string) => {
   return DoResquest
-  .get(`${API_URL}/user/${props.id}` ?? '', {
+  .get(`${API_URL}/user` ?? '', {
     headers: {
-        Authorization: `Bearer ${props.token}`
+        Authorization: `Bearer ${token}`
     }
   })
   .then((response) => response.data).catch((response)=>response.response.data.message);
 };
 
 
-function useUserRequest(props: RequestType) {
+function useUserRequest(token: string) {
   const { data, isLoading } = useQuery({
-    queryKey: ["login", props],
-    queryFn: ()=> getUser(props),
-    enabled: !!props
+    queryKey: ["login", token],
+    queryFn: ()=> getUser(token),
+    enabled: !!token
   });
 
   return { data, isLoading };
