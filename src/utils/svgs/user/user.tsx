@@ -1,8 +1,13 @@
 import { UserComponent } from "./user.style";
 
-export default function UserSvg() {
+interface PropType {
+  size: number;
+  color?: string;
+}
+
+export default function UserSvg(prop: PropType) {
   return (
-    <UserComponent>
+    <UserComponent  $starSize={prop.size}>
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +18,7 @@ export default function UserSvg() {
       >
         <g
           transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-          fill="#000000"
+          fill={prop.color ? prop.color : "#000000"}
           stroke="none"
         >
           <path
