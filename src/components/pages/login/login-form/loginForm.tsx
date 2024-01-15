@@ -61,13 +61,13 @@ export default function LoginForm() {
       console.log(res.message);
     }
 
-    const fakeUser = {
+    const User = {
       access_token: res.data.access_token,
       user_name: `${res.data.user.first_name} ${res.data.user.last_name}`,
     };
 
-    dispath(login(fakeUser));
-    router.push('/account')
+    dispath(login(User));
+    router.push('/account-settings')
   };
 
   return (
