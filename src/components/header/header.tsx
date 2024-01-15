@@ -8,9 +8,9 @@ export default function Header() {
   return (
     <HeaderComponent.Header>
       <HeaderComponent.ConteinerHeader>
-      <Logo />
-      <Search/>
-      <Options/>
+        <Logo />
+        <Search />
+        <Options />
       </HeaderComponent.ConteinerHeader>
     </HeaderComponent.Header>
   );
