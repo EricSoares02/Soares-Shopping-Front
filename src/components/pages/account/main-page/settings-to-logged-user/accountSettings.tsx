@@ -15,7 +15,7 @@ export default function AccountSettingOptions(role: string) {
 
   return (
     <Style.Conteiner>
-      <Link href={'/account/information'}>
+      <Link href={'/account-settings/information'}>
       <Style.Sections>
         <Style.Image>{UserSvg({size: 30, color: '#1E6FD9'})}</Style.Image>
         <Style.Titles>
@@ -26,7 +26,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account/security'}>
+      <Link href={'/account-settings/security'}>
       <Style.Sections>
         <Style.Image>{SecuritySvg({size: 30, color: '#1E6FD9'})}</Style.Image>
         <Style.Titles>
@@ -37,7 +37,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account/business-associate'}>
+      <Link href={'/account-settings/business-associate'}>
       <Style.Sections>
         <Style.Image>{SendSvg({size: 30, color: '#1E6FD9'})}</Style.Image>
         <Style.Titles>
@@ -48,7 +48,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account/privacy'}>
+      <Link href={'/account-settings/privacy'}>
       <Style.Sections>
         <Style.Image>{PrivacySvg({size: 30, color: '#1E6FD9'})}</Style.Image>
         <Style.Titles>
@@ -59,7 +59,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account/dashboard'} 
+      <Link href={'/account-settings/dashboard'} 
       style={
         {
           pointerEvents: isAdmin ? 'auto' : 'none',
@@ -86,7 +86,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account/activity'}>
+      <Link href={'/account-settings/activity'}>
       <Style.Sections>
         <Style.Image>{HistoricSvg({size: 30, color: '#1E6FD9'})}</Style.Image>
         <Style.Titles>

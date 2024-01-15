@@ -6,14 +6,12 @@ import { RootStateType } from "@/redux/root-reducer";
 export default function Options() {
   const token = useSelector((state: RootStateType) => state.userSlice);
 
-  const rout = token.access_token ? "/account" : "/login";
-
   return (
     <OptionsComponent.DivOptions>
-      <Link href={rout}>
+      <Link href={'/account-settings'}>
         {token.user_name ? (
           <OptionsComponent.ImageOptionUserLogged>
-            {token.user_name.split(" ")[0].charAt(1).toUpperCase() +
+            {token.user_name.replace(/"/g, "").split(" ")[0].charAt(0).toUpperCase() +
               token.user_name.split(" ")[1].charAt(0).toUpperCase()}
           </OptionsComponent.ImageOptionUserLogged>
         ) : (
