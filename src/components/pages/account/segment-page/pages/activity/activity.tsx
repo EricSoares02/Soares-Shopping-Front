@@ -8,7 +8,7 @@ export default function ActivityByUser() {
         <Style.Sections>
           <Style.Titles>
             <span>Meus Comentários</span>
-            <p>Veja os comentários que vc fez.</p>
+            <p>Veja os comentários que você fez.</p>
           </Style.Titles>
           <Style.Sgv src={"/back-btn.svg"} />
         </Style.Sections>
