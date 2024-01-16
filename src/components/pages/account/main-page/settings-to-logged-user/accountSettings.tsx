@@ -13,6 +13,7 @@ export default function AccountSettingOptions(role: string) {
  
   const isAdmin =  CanAccessAdminPage(role);
 
+  
   return (
     <Style.Conteiner>
       <Link href={'/account-settings/information'}>
@@ -59,7 +60,7 @@ export default function AccountSettingOptions(role: string) {
       </Style.Sections>
       </Link>
 
-      <Link href={'/account-settings/dashboard'} 
+      <Link href={'/dashboard'} 
       style={
         {
           pointerEvents: isAdmin ? 'auto' : 'none',
