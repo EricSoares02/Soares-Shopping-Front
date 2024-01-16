@@ -15,7 +15,6 @@ export default function Account() {
   );
   const { data, isLoading } = useUserRequest(token.replace(/"/g, ""));
 
-    console.log(data)
   return isLoading ? (
     <>
       <Load />
