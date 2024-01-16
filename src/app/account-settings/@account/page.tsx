@@ -15,7 +15,7 @@ export default function Account() {
   );
   const { data, isLoading } = useUserRequest(token.replace(/"/g, ""));
 
-
+    console.log(data)
   return isLoading ? (
     <>
       <Load />
@@ -27,7 +27,7 @@ export default function Account() {
       <AccountPageComponent.AlignConteiner>
         {ShowAccountUser(
           `${data.data.first_name} ${data.data.last_name}`,
-          data.data.email
+          data.data.email, data.data.url_img
         )}
         {AccountSettingOptions(data.data.role)}
         {LogoutConteiner()}
