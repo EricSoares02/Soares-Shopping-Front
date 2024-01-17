@@ -31,15 +31,14 @@ export default function Page() {
     </>
   ) : (
     <>
-      {data.data ? (
-        <>
-          <BackButton />
-          <AccountSegmentComponent.Conteiner>
-            <AccountSegmentComponent.AlignConteiner>
-              <Style.Conteiner>
-                {" "}
-                {data.data.map((comment) => (
-                  <Style.CommentsCase key={comment.id}>
+      <BackButton />
+      <AccountSegmentComponent.Conteiner>
+        <AccountSegmentComponent.AlignConteiner>
+          {data.data ? (
+            <Style.Conteiner>
+              {" "}
+              {data.data.map((comment) => (
+                <Style.CommentsCase key={comment.id}>
                   <Style.TopArea>
                     <Style.CommentStarsCase>
                       {setStars(comment.stars)}
@@ -48,22 +47,24 @@ export default function Page() {
                       {date(comment.createdAt)}
                     </Style.CommentDateCase>
                   </Style.TopArea>
-                  <Style.TitleArea>
-                    {comment.title}
-                  </Style.TitleArea>
+                  <Style.TitleArea>{comment.title}</Style.TitleArea>
                   <Style.BottomArea>
                     <span>Likes: {32}</span>
-                    <Link href={`/product?id=${comment.product_commentedId}`} target="_blank">See Product</Link>
+                    <Link
+                      href={`/product?id=${comment.product_commentedId}`}
+                      target="_blank"
+                    >
+                      See Product
+                    </Link>
                   </Style.BottomArea>
                 </Style.CommentsCase>
-                ))}{" "}
-              </Style.Conteiner>
-            </AccountSegmentComponent.AlignConteiner>
-          </AccountSegmentComponent.Conteiner>
-        </>
-      ) : (
-        NotFoundCommentByUser()
-      )}
+              ))}{" "}
+            </Style.Conteiner>
+          ) : (
+            <>{NotFoundCommentByUser()}</>
+          )}
+        </AccountSegmentComponent.AlignConteiner>
+      </AccountSegmentComponent.Conteiner>
     </>
   );
 }

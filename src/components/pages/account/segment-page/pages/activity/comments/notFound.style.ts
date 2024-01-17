@@ -11,6 +11,7 @@ const NotFoundCommentByUserComponent = {
     align-items: center;
     color: ${props=>props.theme.colors.blue};
     & a {
+      font-size: 20px;
       text-decoration: none;
       color: black;
     }
