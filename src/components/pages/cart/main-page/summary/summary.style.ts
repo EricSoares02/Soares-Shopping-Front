@@ -15,6 +15,7 @@ const SummaryComponent = {
     width: 100%;
     height: 50px;
     font-size: 12px;
+    border-bottom: 1px solid ${(props) => props.theme.colors.gray}; 
   `,
   Section: styled.div`
     width: 100%;
