@@ -4,9 +4,7 @@ const NoDataCartComponent = {
   Conteiner: styled.div`
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;  
   `,
 
   Section: styled.section`
@@ -14,8 +12,9 @@ const NoDataCartComponent = {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 50px;
     align-items: center;
+    gap: 6px;
   `,
 
   Button: styled.button`
