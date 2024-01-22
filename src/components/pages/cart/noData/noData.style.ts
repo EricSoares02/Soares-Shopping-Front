@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const NoDataCartComponent = {
   Conteiner: styled.div`
-    width: 100%;
+    width: 700px;
     height: 100%;
     display: flex;  
   `,
