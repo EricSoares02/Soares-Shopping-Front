@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NoDataCartComponent = {
+const FinishPurchaseButtonToCartComponent = {
   Conteiner: styled.div`
     width: 700px;
     height: 100%;
@@ -12,7 +12,6 @@ const NoDataCartComponent = {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
     align-items: center;
     gap: 6px;
   `,
@@ -29,14 +28,13 @@ const NoDataCartComponent = {
     width: 300px;
     height: 65px;
     gap: 14px;
-    background-color: ${(props) => props.theme.colors.lightBlue};
-    color: ${(props) => props.theme.colors.blackBlue};
+    background-color: ${(props) => props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.white};
     transition: ${(props) => props.theme.transition};
     &:hover {
-      background-color: ${(props) => props.theme.colors.blue};
-      color: ${(props) => props.theme.colors.white};
+      background-color: ${(props) => props.theme.colors.blackBlue};
     }
   `
 };
 
-export { NoDataCartComponent };
+export { FinishPurchaseButtonToCartComponent };

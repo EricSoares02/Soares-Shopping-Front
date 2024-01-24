@@ -1,3 +1,4 @@
+import FinishPurchaseButtonToCart from "./finishPurchuse/finishBtn";
 import { SummaryComponent } from "./summary.style";
 
 export default function Summary(TotalValue: string){
@@ -12,7 +13,7 @@ export default function Summary(TotalValue: string){
           <p>{TotalValue}</p>
         </SummaryComponent.Section>
         <SummaryComponent.AlignBtn>
-          comprar btn
+        {FinishPurchaseButtonToCart()}
         </SummaryComponent.AlignBtn>
     </SummaryComponent.Conteiner>
         </>

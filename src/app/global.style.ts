@@ -7,7 +7,8 @@ const StylesAndThemes = {
     bg: '#F2F2F2',
     gray: '#D9D9D9',
     white: '#FFFFFF',
-    grayBlack: '#3E3E40'
+    grayBlack: '#3E3E40',
+    lightBlue: '#B3D5F2'
   },
   transition: "1.2s",
   lengths: {

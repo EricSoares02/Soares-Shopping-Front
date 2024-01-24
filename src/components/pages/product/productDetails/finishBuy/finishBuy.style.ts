@@ -20,7 +20,7 @@ const FinishBuyComponent = {
     width: 300px;
     height: 65px;
     gap: 14px;
-    background-color: #b3d5f2;
+    background-color: ${(props) => props.theme.colors.lightBlue};
     color: ${(props) => props.theme.colors.blue};
     transition: ${(props) => props.theme.transition};
     &:hover {
